@@ -12,3 +12,8 @@ ___
  <p align="justify">     
 You can run Spark using its standalone cluster mode, on EC2, on Hadoop YARN, or on Apache Mesos. Access data in HDFS, Cassandra, HBase, Hive, Tachyon, and any Hadoop data source.
 </p>
+</p>
+<p align="center">
+  <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/data_type_access.jpg">
+  <b>Figura1: Data type access Overview (spark.apache.org)</b>
+</p>
