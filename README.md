@@ -30,3 +30,4 @@ Apache Spark provides some advantages like lightning speed of computation, highl
 ___
 <br><br>
 ### How Apache Spark works
+Apache Spark engine execute your  data processing in a distributed memory over a cluster of machines.
