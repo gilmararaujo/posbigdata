@@ -4,6 +4,7 @@ ___
    Spark powers a stack of libraries including SQL and DataFrames, MLlib for machine learning, GraphX, and Spark Streaming. You can combine these libraries seamlessly in the same application.
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_Stack.jpg">
+  <b>Figura1: Apache Spark Architectural Overview (spark.apache.org)</b>
 </p>
 
       
