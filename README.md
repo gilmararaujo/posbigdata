@@ -8,7 +8,7 @@ ___
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_Stack.jpg">
   <b>Figura1: Apache Spark Architectural Overview (spark.apache.org).</b>
 </p>
-
+<br>
  <p align="justify">     
 You can run Spark using its standalone cluster mode, on EC2, on Hadoop YARN, or on Apache Mesos. Access data in HDFS, Cassandra, HBase, Hive, Tachyon, and any Hadoop data source.
 </p>
