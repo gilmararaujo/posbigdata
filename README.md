@@ -6,7 +6,7 @@ ___
 </p>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_Stack.jpg">
-  <b>Figura1: Apache Spark Architectural Overview (spark.apache.org)</b>
+  <b>Figura1: Apache Spark Architectural Overview (spark.apache.org).</b>
 </p>
 
  <p align="justify">     
@@ -15,5 +15,5 @@ You can run Spark using its standalone cluster mode, on EC2, on Hadoop YARN, or 
 </p>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/data_type_access.jpg">
-  <b>Figura1: Data type access Overview (spark.apache.org)</b>
+  <b>Figura2: Data type access Overview (spark.apache.org).</b>
 </p>
