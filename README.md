@@ -18,6 +18,7 @@ You can run Spark using its standalone cluster mode, on EC2, on Hadoop YARN, or 
   <b>Figura2: Data type access Overview (spark.apache.org).</b>
 </p>
 <p align="justify">
+<br>
 Apache Spark provides some advantages like lightning speed of computation, highly accessible, compatibility, convenient and Enhanced productivity.
 </p>
 
