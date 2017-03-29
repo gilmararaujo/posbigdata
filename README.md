@@ -26,3 +26,8 @@ Apache Spark provides some advantages like lightning speed of computation, highl
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/capability.jpg">
   <b>Figura3: Spark Capability (spark.apache.org).</b>
 </p>
+
+___
+<p align="justify">  
+How Apache Spark works
+</p>  
