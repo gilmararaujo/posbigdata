@@ -1,4 +1,4 @@
-## Understand the development of solutions based on MapReduce with Spark and the Scala language
+## Understand the development of solutions based on MapReduce with Spark and Scala language
 ___
 <p align="justify">
    Apache Spark is a fast and general engine for large-scale data processing. It can run programs up to 100x faster than Hadoop MapReduce in memory or 10x faster on disk. Apache Spark was created at AMPLabs in UC Berkeley as part of Berkeley Data Analytics Stack (BDAS). Apache Spark has an advanced DAG execution engine that supports acyclic data flow and in-memory computing. Also this, you can write applications and use it interactively quickly in Scala, Python, R shells.
