@@ -34,7 +34,7 @@ ___
 Apache Spark engine execute your  data processing in a distributed memory over a cluster of machines. In the figure below we can see a logical diagram of how a typical Spark job processes:
 </p>
 
-<br>
+</br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/spark_job_process.JPG">
   <b>Figura 4: Spark job process.</b>
