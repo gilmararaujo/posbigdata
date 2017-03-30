@@ -54,7 +54,8 @@ The user’s driver program launches multiple workers, which read data blocks fr
 
 ### Apache Spark - Resilient Distributed Dataset (RDD)
 <p align="justify"> 
-Lazy Evaluation helps to optimize the Disk & Memory Usage in Spark.
+Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefit of Lazy Evaluation is that we only need to read the first line from the File instead of the whole file and also there is no need to store the complete file content in Memory.
+<br>
 </p>
 <br>
 <p align="center">
