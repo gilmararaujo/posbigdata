@@ -51,8 +51,8 @@ The user’s driver program launches multiple workers, which read data blocks fr
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
   <b>Figura 5: Spark job process.</b>
 </p>
-
 </br>
+
 ### Apache Spark - Resilient Distributed Dataset (RDD)
 <p align="justify"> 
 An RDD is the basic unit of data in Spark upon which all Operations are performed. RDDs are intermediate results stored in Memory and are Partitioned to be operated on multiple nodes in the Cluster.
