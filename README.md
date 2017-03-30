@@ -64,6 +64,7 @@ An RDD Operation can be either be actions or transformations. Action returns res
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
   <b>Figura 6: RDD Apache Spark job process.</b>
 </p>
+</br>
 
 <p align="justify"> 
 Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefit of Lazy Evaluation is that we only need to read the first line from the File instead of the whole file and also there is no need to store the complete file content in Memory.
