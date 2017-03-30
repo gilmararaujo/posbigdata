@@ -46,3 +46,12 @@ The user’s driver program launches multiple workers, which read data blocks fr
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
   <b>Figura4: Spark job process.</b>
 </p>
+
+
+### Apache Spark - Resilient Distributed Dataset (RDD)
+
+<br>
+<p align="center">
+  <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
+  <b>Figura4: Spark job process.</b>
+</p>
