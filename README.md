@@ -73,5 +73,5 @@ Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefi
 When we create new RDDs based on the existing RDDs, Spark manage these dependencies using Lineage Graph.
 </p>
 <p align="justify"> 
-Let’s understand this conceptually by using the a example. We want to find the 1500 most commonly used words in a text file. We can see a possible solution in Figure 7:
+Let’s understand this conceptually by using with a example. We want to find the 1500 most commonly used words in a text file. We can see a possible solution in Figure 7:
 </p>
