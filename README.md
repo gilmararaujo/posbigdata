@@ -72,3 +72,6 @@ An RDD Operation can be either be actions or transformations. Action returns res
 Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefit of Lazy Evaluation is that we only need to read the first line from the File instead of the whole file and also there is no need to store the complete file content in Memory.
 When we create new RDDs based on the existing RDDs, Spark manage these dependencies using Lineage Graph.
 </p>
+<p align="justify"> 
+Let’s understand this conceptually by using the a example. We want to find the 1500 most commonly used words in a text file. A possible solution is showed in Figure 7:
+</p>
