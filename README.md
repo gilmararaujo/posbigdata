@@ -6,7 +6,7 @@ ___
 </p>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_Stack.jpg">
-  <b>Figura1: Apache Spark Architectural Overview (spark.apache.org).</b>
+  <b>Figura 1: Apache Spark Architectural Overview (spark.apache.org).</b>
 </p>
 <br>
  <p align="justify">     
@@ -15,7 +15,7 @@ You can run Spark using its standalone cluster mode, on EC2, on Hadoop YARN, or 
 </p>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/data_type_access.jpg">
-  <b>Figura2: Data type access Overview (spark.apache.org).</b>
+  <b>Figura 2: Data type access Overview (spark.apache.org).</b>
 </p>
 <br>
 <p align="justify">
@@ -24,7 +24,7 @@ Apache Spark provides some advantages like lightning speed of computation, highl
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/capability.jpg">
-  <b>Figura3: Spark Capability.</b>
+  <b>Figura 3: Spark Capability.</b>
 </p>
 
 ___
@@ -35,7 +35,7 @@ Apache Spark engine execute your  data processing in a distributed memory over a
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/spark_job_process.JPG">
-  <b>Figura4: Spark job process.</b>
+  <b>Figura 4: Spark job process.</b>
 </p>
 
 ### How does Apache Spark execute a job
@@ -44,7 +44,7 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
-  <b>Figura5: Spark job process.</b>
+  <b>Figura 5: Spark job process.</b>
 </p>
 
 
@@ -53,5 +53,5 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
-  <b>Figura6: Spark job process.</b>
+  <b>Figura 6: Spark job process.</b>
 </p>
