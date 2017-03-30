@@ -54,11 +54,16 @@ The user’s driver program launches multiple workers, which read data blocks fr
 
 ### Apache Spark - Resilient Distributed Dataset (RDD)
 <p align="justify"> 
-Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefit of Lazy Evaluation is that we only need to read the first line from the File instead of the whole file and also there is no need to store the complete file content in Memory.
-<br>
+An RDD is the basic unit of data in Spark upon which all Operations are performed. RDDs are intermediate results stored in Memory and are Partitioned to be operated on multiple nodes in the Cluster.
+An RDD Operation can be either be actions or transformations. Action returns result to the Driver Program or write it to the Storage. An action normally starts a Computation to provide result and always return some other data type other than RDD. Transformation returns Pointer to new RDD.
+
 </p>
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
   <b>Figura 6: Spark job process.</b>
+</p>
+
+<p align="justify"> 
+Lazy Evaluation helps to optimize the Disk and Memory Usage in Spark. The benefit of Lazy Evaluation is that we only need to read the first line from the File instead of the whole file and also there is no need to store the complete file content in Memory.
 </p>
