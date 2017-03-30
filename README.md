@@ -49,7 +49,7 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
-  <b>Figura 5: Spark job process.</b>
+  <b>Figura 5: Spark runtime.</b>
 </p>
 </br>
 
@@ -62,7 +62,7 @@ An RDD Operation can be either be actions or transformations. Action returns res
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
-  <b>Figura 6: Spark job process.</b>
+  <b>Figura 6: RDD Apache Spark job process.</b>
 </p>
 
 <p align="justify"> 
