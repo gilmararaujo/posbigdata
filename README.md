@@ -37,3 +37,12 @@ Apache Spark engine execute your  data processing in a distributed memory over a
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/spark_job_process.JPG">
   <b>Figura4: Spark job process.</b>
 </p>
+
+### How does Apache Spark execute a job
+The user’s driver program launches multiple workers, which read data blocks from a distributed file system and can persist computed RDD partitions in memory.
+
+<br>
+<p align="center">
+  <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
+  <b>Figura4: Spark job process.</b>
+</p>
