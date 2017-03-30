@@ -30,7 +30,9 @@ Apache Spark provides some advantages like lightning speed of computation, highl
 ___
 <br><br>
 ### How Apache Spark works
+ <p align="justify"> 
 Apache Spark engine execute your  data processing in a distributed memory over a cluster of machines. In the figure below we can see a logical diagram of how a typical Spark job processes:
+</p>
 
 <br>
 <p align="center">
@@ -39,7 +41,9 @@ Apache Spark engine execute your  data processing in a distributed memory over a
 </p>
 
 ### How does Apache Spark execute a job
+ <p align="justify"> 
 The user’s driver program launches multiple workers, which read data blocks from a distributed file system and can persist computed RDD partitions in memory.
+</p>
 
 <br>
 <p align="center">
@@ -49,7 +53,9 @@ The user’s driver program launches multiple workers, which read data blocks fr
 
 
 ### Apache Spark - Resilient Distributed Dataset (RDD)
-
+<p align="justify"> 
+Lazy Evaluation helps to optimize the Disk & Memory Usage in Spark.
+</p>
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
