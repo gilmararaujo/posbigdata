@@ -44,7 +44,7 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
-  <b>Figura4: Spark job process.</b>
+  <b>Figura5: Spark job process.</b>
 </p>
 
 
@@ -53,5 +53,5 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/RDDsparkProcess.JPG">
-  <b>Figura4: Spark job process.</b>
+  <b>Figura6: Spark job process.</b>
 </p>
