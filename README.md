@@ -84,6 +84,7 @@ Let’s understand this conceptually by using with a example. We want to find th
 </br>
 
 ---
+</br>
 
 ### Some examples in terms of use Apache Spark with Scala language
 </br>
