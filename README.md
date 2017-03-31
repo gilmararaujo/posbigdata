@@ -111,7 +111,7 @@ val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word
 wordCount.foreach(word => println(word))
 wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
 
-
+<br>
 
 2 - Contar palavras por livro. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
@@ -119,7 +119,7 @@ val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (
 counts.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 topWordCount.take(100).foreach(x => println(x))
 
-
+<br>
 
 3 - Fornecer uma palavra e mostrar em que arquivos que encontramos a palavra. </br> </br>
 val rdd = sc.wholeTextFiles("file:///home/cloudera/a.txt").cache()
@@ -134,7 +134,7 @@ files.collect.foreach( filename => {
     doProcess(filename)
 }) 
 
-
+<br>
 
 4- Fornecer uma palvra e mostrar em que arquivos encontramos a palavra e a quantidade de ocorrencias. </br> </br>
 val rdd = sc.wholeTextFiles("hdfs://localhost:8020/user/cloudera/input")
@@ -149,7 +149,7 @@ files.collect.foreach( filename => {
     doProcess(filename)
 }) 
 
-
+<br>
 
 5 - Encontrar as 1500 palavras mais usadas em todo os livros. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
@@ -157,7 +157,7 @@ val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(wor
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 topWordCount.take(1500).foreach(x => println(x))
 
-
+<br>
 
 6 - Encontrar as 1500 palavras mais usadas em 1 determindado livro. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
@@ -165,7 +165,7 @@ val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(wor
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 topWordCount.take(10).foreach(x => println(x))
 
-
+<br>
 
 7- Encontrar as 1500 palavras menos usadas. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
@@ -174,7 +174,7 @@ val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(wor
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 topWordCount.take(1500).foreach(x => println(x))
 
-
+<br>
 
 8 - Encontrar o vocabulario comum de 1500 palavras entre 2 livros. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
@@ -185,7 +185,7 @@ val result = book1.intersection(book2)
 result.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 result.take(1500).foreach(x => println(x))
 
-
+<br>
 
 9- Encontrar o vocabulario de palavras diferente de cada livro entre 2 livros removendo as palavras que forem encontradas nos dois livros. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
