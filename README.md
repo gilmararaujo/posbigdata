@@ -97,7 +97,7 @@ Then, start the Spark Shell: </br>
 </br>
 and, execute the algorithm bellow.
 </br> </br>
-1 - Contar todas as ocorrencias de palavras (removendo as preposicoes e coisas assim). </br> </br>
+1 - Count all occurrences of words (removing prepositions and things like that). </br> </br>
 val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()
 val stopWords = sc.textFile("file:///home/cloudera/stopwords.txt").cache() //stanfordnlp -> CoreNLP
 val stopWordSet = stopWords.collect.toSet
