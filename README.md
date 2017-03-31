@@ -88,7 +88,7 @@ Let’s understand this conceptually by using with a example. We want to find th
 ### Some examples in terms of use Apache Spark with Scala language
 
 <p align="justify"> 
-First of all, you should to do download of Cloudera VM. After that, you have  to put your files into the Hadoop Distributed File System (HDFS).  
+First of all, you should to do download of Cloudera VM. After that, you have  to put your files into the Hadoop Distributed File System (HDFS).</br>  
 For example:
 #hadoop fs -put /home/cloudera/input /user/cloudera/output
 
