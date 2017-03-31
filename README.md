@@ -92,7 +92,8 @@ Let’s understand this conceptually by using with a example. We want to find th
 First of all, you should download of Cloudera VM. After that, you have  to put your files into the Hadoop Distributed File System (HDFS). 
 
 For example:</br>
-#hadoop fs -put /home/cloudera/input /user/cloudera/output
+#hdfs dfs -copyFromLocal /home/cloudera/input </br>
+#hdfs dfs -ls /user/cloudera/input
 
 Then, start the Spark Shell: </br>
 #spark-shell
