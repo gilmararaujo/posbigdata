@@ -94,4 +94,107 @@ For example:
 
 Then, start the Spark Shell: </br>
 #spark-shell
+</br> </br>
+1 - Contar todas as ocorrencias de palavras (removendo as preposicoes e coisas assim)
+val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()
+val stopWords = sc.textFile("file:///home/cloudera/stopwords.txt").cache() //stanfordnlp -> CoreNLP
+val stopWordSet = stopWords.collect.toSet
+val stopWordSetBC = sc.broadcast(stopWordSet) //send to any worker
+val words = text.flatMap(str => str.split("\\W")).filter(!_.isEmpty)
+val clean = words.mapPartitions{iter =>
+    val stopWordSet = stopWordSetBC.value
+    iter.filter(word => !stopWordSet.contains(word))
+}
+val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_)
+wordCount.foreach(word => println(word))
+wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
+
+
+
+2 - Contar palavras por livro
+val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word, 1)).reduceByKey(_+_)
+counts.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+topWordCount.take(100).foreach(x => println(x))
+
+
+
+3 - Fornecer uma palavra e mostrar em que arquivos que encontramos a palavra
+val rdd = sc.wholeTextFiles("file:///home/cloudera/a.txt").cache()
+val files = rdd.map { case (filename, content) => filename}
+def doProcess(file: String) = { 
+	 val word = "z"//input word
+	 val rdd2 = sc.textFile(file);
+	 val wordFound = rdd2.flatMap(str => str.split(" ")).filter(text => text.contains(word)).collect().mkString(" ");
+	 println("Word: %s => filename %s".format(wordFound,file));
+}
+files.collect.foreach( filename => {
+    doProcess(filename)
+}) 
+
+
+
+4- Fornecer uma palvra e mostrar em que arquivos encontramos a palavra e a quantidade de ocorrencias.
+val rdd = sc.wholeTextFiles("hdfs://localhost:8020/user/cloudera/input")
+val files = rdd.map { case (filename, content) => filename}
+def doProcess(file: String) = { 
+	 val word = "z"//input word
+	 val rdd2 = sc.textFile(file);
+	 val wordFoundCount = text.flatMap(str => str.split(" ")).filter(text => text.contains(word)).map(word => (word, 1)).reduceByKey(_+_).collect().mkString(" ");
+	 println("Word, total: %s => filename %s".format(wordFoundCount,file));
+}
+files.collect.foreach( filename => {
+    doProcess(filename)
+}) 
+
+
+
+5 - Encontrar as 1500 palavras mais usadas em todo os livros
+val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
+val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey(false)
+topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+topWordCount.take(1500).foreach(x => println(x))
+
+
+
+6 - Encontrar as 1500 palavras mais usadas em 1 determindado livro
+val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey(false)
+topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+topWordCount.take(10).foreach(x => println(x))
+
+
+
+7- Encontrar as 1500 palavras menos usadas
+val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
+val rddone = sc.textFile("hdfs://localhost:8020/user/cloudera/input/")
+val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey()
+topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+topWordCount.take(1500).foreach(x => println(x))
+
+
+
+8 - Encontrar o vocabulario comum de 1500 palavras entre 2 livros
+val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
+val book2 = file2.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
+val result = book1.intersection(book2)
+result.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+result.take(1500).foreach(x => println(x))
+
+
+
+9- Encontrar o vocabulario de palavras diferente de cada livro entre 2 livros removendo as palavras que forem encontradas nos dois livros
+val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
+val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
+val book2 = file2.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
+val result = book1.subtractByKey(book2)
+val temp = data.union(data1)
+val rem = temp.subtractByKey(res)
+rem.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
+rem.take(10).foreach(x => println(x))
+
+
 </p>
