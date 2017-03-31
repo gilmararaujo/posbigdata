@@ -75,3 +75,10 @@ When we create new RDDs based on the existing RDDs, Spark manage these dependenc
 <p align="justify"> 
 Let’s understand this conceptually by using with a example. We want to find the 1500 most commonly used words in a text file. We can see a possible solution in Figure 7:
 </p>
+
+<br>
+<p align="center">
+  <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/wordCounSample.jpg">
+  <b>Figura 7: Word Count job process.</b>
+</p>
+</br>
