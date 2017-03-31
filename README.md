@@ -92,6 +92,6 @@ First of all, you should to do download of Cloudera VM. After that, you have  to
 For example:
 #hadoop fs -put /home/cloudera/input /user/cloudera/output
 
-Then, start the Spark Shell
+Then, start the Spark Shell: </br>
 #spark-shell
 </p>
