@@ -94,6 +94,8 @@ For example:
 
 Then, start the Spark Shell: </br>
 #spark-shell
+</br>
+and, execute the algorithm bellow.
 </br> </br>
 1 - Contar todas as ocorrencias de palavras (removendo as preposicoes e coisas assim). </br> </br>
 val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()
