@@ -113,7 +113,7 @@ wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
 
 <br>
 
-2 - Contar palavras por livro. </br> </br>
+2 - Count words by book. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word, 1)).reduceByKey( _ + _ )
 counts.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -121,7 +121,7 @@ topWordCount.take(100).foreach(x => println(x))
 
 <br>
 
-3 - Fornecer uma palavra e mostrar em que arquivos que encontramos a palavra. </br> </br>
+3 - Provide a word and show in which files we find the word. </br> </br>
 val rdd = sc.wholeTextFiles("file:///home/cloudera/a.txt").cache()
  val files = rdd.map { case (filename, content) => filename}
 def doProcess(file: String) = { 
@@ -136,7 +136,7 @@ files.collect.foreach( filename => {
 
 <br>
 
-4- Fornecer uma palvra e mostrar em que arquivos encontramos a palavra e a quantidade de ocorrencias. </br> </br>
+4- Provide a palvra and show in which files we find the word and amount of occurrences. </br> </br>
 val rdd = sc.wholeTextFiles("hdfs://localhost:8020/user/cloudera/input")
 val files = rdd.map { case (filename, content) => filename}
 def doProcess(file: String) = { 
