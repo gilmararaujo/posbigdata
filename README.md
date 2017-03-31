@@ -89,7 +89,7 @@ Let’s understand this conceptually by using with a example. We want to find th
 
 <p align="justify"> 
 First of all, you should download of Cloudera VM. After that, you have  to put your files into the Hadoop Distributed File System (HDFS). 
- </br> 
+
 For example:</br>
 #hadoop fs -put /home/cloudera/input /user/cloudera/output
 
@@ -152,7 +152,7 @@ files.collect.foreach( filename => {
 
 <br>
 
-5 - Encontrar as 1500 palavras mais usadas em todo os livros. </br> </br>
+5 - Find the 1500 most used words in all books. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _ + _).map{case (word, count) => (count, word)}.sortByKey(false)
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -160,7 +160,7 @@ topWordCount.take(1500).foreach(x => println(x))
 
 <br>
 
-6 - Encontrar as 1500 palavras mais usadas em 1 determindado livro. </br> </br>
+6 - Find the 1500 most used words in 1 book. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _ + _ ).map{case (word, count) => (count, word)}.sortByKey(false)
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -168,7 +168,7 @@ topWordCount.take(10).foreach(x => println(x))
 
 <br>
 
-7- Encontrar as 1500 palavras menos usadas. </br> </br>
+7- Find the 1500 least used words. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
 val rddone = sc.textFile("hdfs://localhost:8020/user/cloudera/input/")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _ + _ ).map{case (word, count) => (count, word)}.sortByKey()
@@ -177,7 +177,7 @@ topWordCount.take(1500).foreach(x => println(x))
 
 <br>
 
-8 - Encontrar o vocabulario comum de 1500 palavras entre 2 livros. </br> </br>
+8 - Find the common vocabulary of 1500 words between 2 books. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey( _ + _)
@@ -188,7 +188,7 @@ result.take(1500).foreach(x => println(x))
 
 <br>
 
-9- Encontrar o vocabulario de palavras diferente de cada livro entre 2 livros removendo as palavras que forem encontradas nos dois livros. </br> </br>
+9- Find the different word vocabulary of each book between 2 books by removing the words that are found in both books. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey( _ + _ )
