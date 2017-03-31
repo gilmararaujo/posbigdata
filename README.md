@@ -51,7 +51,7 @@ The user’s driver program launches multiple workers, which read data blocks fr
 <br>
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_runtime.jpg">
-  <b>Figura 5: Spark runtime.</b>
+  <b>Figura 5: Spark runtime(Zaharia at all 2012).</b>
 </p>
 </br>
 
