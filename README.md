@@ -188,7 +188,7 @@ result.take(1500).foreach(x => println(x))
 
 <br>
 
-9- Find the different word vocabulary of each book between 2 books by removing the words that are found in both books. </br> </br>
+9- Find the different word vocabulary of each book between 2 books, and remove the words that are found in both books. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey( _ + _ )
