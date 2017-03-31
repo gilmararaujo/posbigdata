@@ -99,18 +99,18 @@ Then, start the Spark Shell: </br>
 and, execute the algorithm bellow.
 </br> </br>
 1 - Count all occurrences of words (removing prepositions and things like that). </br> </br>
-val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()
-val stopWords = sc.textFile("file:///home/cloudera/stopwords.txt").cache() //stanfordnlp -> CoreNLP
-val stopWordSet = stopWords.collect.toSet
-val stopWordSetBC = sc.broadcast(stopWordSet) //send to any worker
-val words = text.flatMap(str => str.split("\\W")).filter(!_.isEmpty)
-val clean = words.mapPartitions{iter =>
-    val stopWordSet = stopWordSetBC.value
-    iter.filter(word => !stopWordSet.contains(word))
-}
-val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _ + _ )
-wordCount.foreach(word => println(word))
-wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
+val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()</br>
+val stopWords = sc.textFile("file:///home/cloudera/stopwords.txt").cache() //stanfordnlp -> CoreNLP</br>
+val stopWordSet = stopWords.collect.toSet</br>
+val stopWordSetBC = sc.broadcast(stopWordSet) //send to any worker</br>
+val words = text.flatMap(str => str.split("\\W")).filter(!_.isEmpty)</br>
+val clean = words.mapPartitions{iter =></br>
+    val stopWordSet = stopWordSetBC.value</br>
+    iter.filter(word => !stopWordSet.contains(word))</br>
+}</br>
+val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _ + _ )</br>
+wordCount.foreach(word => println(word))</br>
+wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")</br>
 
 <br>
 
