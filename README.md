@@ -105,7 +105,7 @@ val clean = words.mapPartitions{iter =>
     val stopWordSet = stopWordSetBC.value
     iter.filter(word => !stopWordSet.contains(word))
 }
-val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_)
+val wordCount = clean.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey( _+_ )
 wordCount.foreach(word => println(word))
 wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
 
@@ -113,7 +113,7 @@ wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
 
 2 - Contar palavras por livro. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
-val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word, 1)).reduceByKey(_+_)
+val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word, 1)).reduceByKey( _+_ )
 counts.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
 topWordCount.take(100).foreach(x => println(x))
 
