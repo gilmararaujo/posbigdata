@@ -95,7 +95,7 @@ For example:
 Then, start the Spark Shell: </br>
 #spark-shell
 </br> </br>
-1 - Contar todas as ocorrencias de palavras (removendo as preposicoes e coisas assim)
+1 - Contar todas as ocorrencias de palavras (removendo as preposicoes e coisas assim). </br> </br>
 val text = sc.textFile("hdfs://localhost:8020/user/cloudera/input/text.txt").cache()
 val stopWords = sc.textFile("file:///home/cloudera/stopwords.txt").cache() //stanfordnlp -> CoreNLP
 val stopWordSet = stopWords.collect.toSet
@@ -111,7 +111,7 @@ wordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output/")
 
 
 
-2 - Contar palavras por livro
+2 - Contar palavras por livro. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val counts = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word, 1)).reduceByKey(_+_)
 counts.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -119,7 +119,7 @@ topWordCount.take(100).foreach(x => println(x))
 
 
 
-3 - Fornecer uma palavra e mostrar em que arquivos que encontramos a palavra
+3 - Fornecer uma palavra e mostrar em que arquivos que encontramos a palavra. </br> </br>
 val rdd = sc.wholeTextFiles("file:///home/cloudera/a.txt").cache()
 val files = rdd.map { case (filename, content) => filename}
 def doProcess(file: String) = { 
@@ -134,7 +134,7 @@ files.collect.foreach( filename => {
 
 
 
-4- Fornecer uma palvra e mostrar em que arquivos encontramos a palavra e a quantidade de ocorrencias.
+4- Fornecer uma palvra e mostrar em que arquivos encontramos a palavra e a quantidade de ocorrencias. </br> </br>
 val rdd = sc.wholeTextFiles("hdfs://localhost:8020/user/cloudera/input")
 val files = rdd.map { case (filename, content) => filename}
 def doProcess(file: String) = { 
@@ -149,7 +149,7 @@ files.collect.foreach( filename => {
 
 
 
-5 - Encontrar as 1500 palavras mais usadas em todo os livros
+5 - Encontrar as 1500 palavras mais usadas em todo os livros. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey(false)
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -157,7 +157,7 @@ topWordCount.take(1500).foreach(x => println(x))
 
 
 
-6 - Encontrar as 1500 palavras mais usadas em 1 determindado livro
+6 - Encontrar as 1500 palavras mais usadas em 1 determindado livro. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey(false)
 topWordCount.saveAsTextFile("hdfs://localhost:8020/user/cloudera/output")
@@ -165,7 +165,7 @@ topWordCount.take(10).foreach(x => println(x))
 
 
 
-7- Encontrar as 1500 palavras menos usadas
+7- Encontrar as 1500 palavras menos usadas. </br> </br>
 val rdd = sc.textFile("hdfs://localhost:8020/user/cloudera/input/*")
 val rddone = sc.textFile("hdfs://localhost:8020/user/cloudera/input/")
 val topWordCount = rdd.flatMap(str => str.split(" ")).filter(!_.isEmpty).map(word => (word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey()
@@ -174,7 +174,7 @@ topWordCount.take(1500).foreach(x => println(x))
 
 
 
-8 - Encontrar o vocabulario comum de 1500 palavras entre 2 livros
+8 - Encontrar o vocabulario comum de 1500 palavras entre 2 livros. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
@@ -185,7 +185,7 @@ result.take(1500).foreach(x => println(x))
 
 
 
-9- Encontrar o vocabulario de palavras diferente de cada livro entre 2 livros removendo as palavras que forem encontradas nos dois livros
+9- Encontrar o vocabulario de palavras diferente de cada livro entre 2 livros removendo as palavras que forem encontradas nos dois livros. </br> </br>
 val file1 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val file2 = sc.textFile("hdfs://localhost:8020/user/cloudera/input")
 val book1 = file1.flatMap(str => str.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
