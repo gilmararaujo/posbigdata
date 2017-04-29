@@ -14,7 +14,7 @@ MapReduce consists of 2 steps:
 Map Function – It takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (Key-Value pair).
 
 
-<table style="width:100%">
+<table>
   <tr>
     <td>Input</td>
     <td>Set of data</td> 
