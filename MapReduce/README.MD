@@ -53,10 +53,10 @@ Reduce Function – Takes the output from Map as an input and combines those dat
   <b>Figura 1: WordCount MapReduce workflow (Joel Adams).</b>
 </p>
 
+</br>
+
 ## Workflow of MapReduce consists of 5 steps
 
-</br>
-</br>
 <p align="center">
 
 Splitting – splitting by space, comma, semicolon, or even by a new line (‘\n’);
