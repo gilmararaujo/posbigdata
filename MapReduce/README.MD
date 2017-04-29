@@ -80,5 +80,7 @@ First of all, you should download of Cloudera VM. After that, you have to put yo
 
 For example: </br>
 #hdfs dfs -copyFromLocal /home/cloudera/input 
-#hdfs dfs -ls /user/cloudera/input
+#hdfs dfs -ls /user/cloudera/input</br>
+Then, execute the algorithm:
+#hadoop 
 </p>
