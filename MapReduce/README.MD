@@ -24,7 +24,7 @@ Map Function – It takes a set of data and converts it into another set of data
     <td>Output</td>
     <td>Convert into another set of data
         (Key,Value)</td> 
-    <td></td>
+    <td>(Deer,1), (Bear,1), (River,1), (car,1), (Car,1), (River,1), (Deer,1), (Car,1), (Bear,1)</td>
   </tr>
 </table>
 </p>
@@ -41,7 +41,7 @@ Reduce Function – Takes the output from Map as an input and combines those dat
     <td>Output</td>
     <td>Convert into another set of data
 (Key,Value)</td> 
-    <td>(Deer,1), (Bear,1), (River,1), (car,1), (Car,1), (River,1), (Deer,1), (Car,1), (Bear,1)</td>
+    <td></td>
   </tr>
 </table>
 </p>
