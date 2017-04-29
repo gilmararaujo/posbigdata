@@ -21,12 +21,12 @@ Map Function – It takes a set of data and converts it into another set of data
     <th>Age</th>
   </tr>
   <tr>
-    <td>Jill</td>
+    <td>Input</td>
     <td>Smith</td> 
     <td>50</td>
   </tr>
   <tr>
-    <td>Eve</td>
+    <td>Output</td>
     <td>Jackson</td> 
     <td>94</td>
   </tr>
