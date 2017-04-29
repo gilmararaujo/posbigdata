@@ -55,6 +55,7 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 
 ## Workflow of MapReduce consists of 5 steps
 
+</br>
 <p align="center">
 Splitting – The splitting parameter can be anything, e.g. splitting by space, comma, semicolon, or even by a new line (‘\n’).
 
