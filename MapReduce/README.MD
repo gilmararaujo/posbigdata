@@ -50,5 +50,5 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 
 <p align="center">
   <img src="https://github.com/gilmararaujo/posbigdata/blob/master/MapReduce/images/MapReduceWordCount.png">
-  <b>Figura 1: Apache Spark Architectural Overview (spark.apache.org).</b>
+  <b>Figura 1: WordCount MapReduce workflow.</b>
 </p>
