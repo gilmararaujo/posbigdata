@@ -57,13 +57,13 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 
 </br>
 <p align="center">
-Splitting – The splitting parameter can be anything, e.g. splitting by space, comma, semicolon, or even by a new line (‘\n’).
+Splitting – splitting by space, comma, semicolon, or even by a new line (‘\n’);
 
-Mapping – as explained above
+Mapping – see the Figure 1;
 
 Intermediate splitting – the entire process in parallel on different clusters. In order to group them in “Reduce Phase” the similar KEY data should be on same cluster.
 
-Reduce – it is nothing but mostly group by phase
+Reduce – grouping by phase;
 
-Combining – The last phase where all the data (individual result set from each cluster) is combine together to form a Result
+Combining – The last phase where all the data (individual result set from each cluster) is combine together to form a result.
 </p>
