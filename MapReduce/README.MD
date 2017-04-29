@@ -18,7 +18,7 @@ Map Function – It takes a set of data and converts it into another set of data
   <tr>
     <td>Input</td>
     <td>Set of data</td> 
-    <td>Bus, Car, bus,  car, train, car, bus, car, train, bus, TRAIN,BUS, buS, caR, CAR, car, BUS, TRAIN</td>
+    <td>Deer, Bear, River, Car, Car, River, Deer, Car, Bear</td>
   </tr>
   <tr>
     <td>Output</td>
