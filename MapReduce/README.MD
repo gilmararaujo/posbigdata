@@ -76,9 +76,8 @@ Combining – The last phase where all the data (individual result set from each
 WordCountPath.jar and wordcountcap.jar
 First of all, you should download of Cloudera VM. After that, you have to put your files into the Hadoop Distributed File System (HDFS).
 </p>
-</br>
-<p align="justify">
-For example:
+
+For example: </br>
 #hdfs dfs -copyFromLocal /home/cloudera/input 
 #hdfs dfs -ls /user/cloudera/input
 </p>
