@@ -45,3 +45,5 @@ Reduce Function – Takes the output from Map as an input and combines those dat
   </tr>
 </table>
 </p>
+
+## Work Flow
