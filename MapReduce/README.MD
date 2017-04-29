@@ -70,4 +70,7 @@ Reduce – grouping by phase;
 Combining – The last phase where all the data (individual result set from each cluster) is combine together to form a result.
 </p>
 
-## Now Let’s see the Word Count Program in Java
+## We can see an example of mapreduce through the execution of the jar:
+
+<p align="center">
+</p>
