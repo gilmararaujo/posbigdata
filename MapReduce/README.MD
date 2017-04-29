@@ -75,7 +75,7 @@ Combining – Input to the Reducer is the sorted output of the mappers. In this 
 
 WordCountPath.jar and wordcountcap.jar </br>
 <p align="justify">
-First of all, you should download of Cloudera VM. After that, you have to put your files into the Hadoop Distributed File System (HDFS).
+First of all, you should download of Cloudera VM. After that, you have to put your files (txt) into the Hadoop Distributed File System (HDFS).
 </p>
 
 For example: </br>
