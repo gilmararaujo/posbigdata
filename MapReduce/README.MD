@@ -12,7 +12,7 @@ A MapReduce job usually splits the input data-set into independent chunks which 
 MapReduce consists of 2 steps:
 
 Map Function – It takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (Key-Value pair).
-</p>
+
 
 <table style="width:100%">
   <tr>
@@ -28,3 +28,22 @@ Map Function – It takes a set of data and converts it into another set of data
     <td>94</td>
   </tr>
 </table>
+</p>
+
+<p align="justify">
+Reduce Function – Takes the output from Map as an input and combines those data tuples into a smaller set of tuples.
+<table style="width:100%">
+  <tr>
+    <td>Input</td>
+    <td>Set of data</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Output</td>
+    <td>Convert into another set of data
+
+(Key,Value)</td> 
+    <td>94</td>
+  </tr>
+</table>
+</p>
