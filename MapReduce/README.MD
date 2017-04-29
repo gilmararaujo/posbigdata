@@ -70,7 +70,8 @@ Reduce – grouping by phase;
 Combining – The last phase where all the data (individual result set from each cluster) is combine together to form a result.
 </p>
 
-## We can see an example of mapreduce through the execution of the jar:
+## We can see an example of mapreduce through the execution of the jars:
 
 <p align="center">
+WordCountPath.jar and wordcountcap.jar
 </p>
