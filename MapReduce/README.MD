@@ -38,7 +38,7 @@ Reduce Function – Takes the output from Map as an input and combines those dat
     <td>Converts into smaller set of tuples</td>
   </tr>
   <tr>
-    <td>Output</td>
+    <td>(Deer,1), (Bear,1), (River,1), (car,1), (Car,1), (River,1), (Deer,1), (Car,1), (Bear,1)</td>
     <td>Convert into another set of data
 (Key,Value)</td> 
     <td></td>
