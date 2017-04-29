@@ -72,8 +72,9 @@ Combining – The last phase where all the data (individual result set from each
 
 ## We can see an example of mapreduce through the execution of the jars:
 
+
+WordCountPath.jar and wordcountcap.jar </br>
 <p align="justify">
-WordCountPath.jar and wordcountcap.jar
 First of all, you should download of Cloudera VM. After that, you have to put your files into the Hadoop Distributed File System (HDFS).
 </p>
 
