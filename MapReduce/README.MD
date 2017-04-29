@@ -16,18 +16,15 @@ Map Function – It takes a set of data and converts it into another set of data
 
 <table style="width:100%">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
     <td>Input</td>
-    <td>Smith</td> 
+    <td>Set of data</td> 
     <td>50</td>
   </tr>
   <tr>
     <td>Output</td>
-    <td>Jackson</td> 
+    <td>Convert into another set of data
+
+(Key,Value)</td> 
     <td>94</td>
   </tr>
 </table>
