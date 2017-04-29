@@ -63,7 +63,7 @@ Splitting – splitting by space, comma, semicolon, or even by a new line (\n');
 
 Mapping – Mapper maps input key/value pairs to a set of intermediate key/value pairs;
 
-Intermediate splitting – the entire process in parallel on different clusters. In order to group them in “Reduce Phase” the similar KEY data should be on same cluster.
+Intermediate splitting – the entire process in parallel on different clusters. In order to group them in "Reduce Phase the similar KEY data should be on same cluster.
 
 Reduce – Reducer reduces a set of intermediate values which share a key to a smaller set of values;
 
