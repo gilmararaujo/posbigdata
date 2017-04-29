@@ -47,3 +47,8 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 </p>
 
 ## Work Flow
+
+<p align="center">
+  <img src="https://github.com/gilmararaujo/posbigdata/blob/master/images/Spark_Stack.jpg">
+  <b>Figura 1: Apache Spark Architectural Overview (spark.apache.org).</b>
+</p>
