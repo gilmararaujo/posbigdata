@@ -41,7 +41,7 @@ Reduce Function – Takes the output from Map as an input and combines those dat
     <td>Output</td>
     <td>Convert into another set of data
 (Key,Value)</td> 
-    <td></td>
+    <td>(Bear,2), (Car,3),(Deer,2),(River,2)</td>
   </tr>
 </table>
 </p>
