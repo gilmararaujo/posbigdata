@@ -59,7 +59,7 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 
 <p align="center">
 
-Splitting – splitting by space, comma, semicolon, or even by a new line ('\n);
+Splitting – splitting by space, comma, semicolon, or even by a new line ('\n' );
 
 Mapping – Mapper maps input key/value pairs to a set of intermediate key/value pairs;
 
