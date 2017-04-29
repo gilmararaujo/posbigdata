@@ -18,14 +18,13 @@ Map Function – It takes a set of data and converts it into another set of data
   <tr>
     <td>Input</td>
     <td>Set of data</td> 
-    <td>50</td>
+    <td>Bus, Car, bus,  car, train, car, bus, car, train, bus, TRAIN,BUS, buS, caR, CAR, car, BUS, TRAIN</td>
   </tr>
   <tr>
     <td>Output</td>
     <td>Convert into another set of data
-
-(Key,Value)</td> 
-    <td>94</td>
+        (Key,Value)</td> 
+    <td></td>
   </tr>
 </table>
 </p>
@@ -36,19 +35,13 @@ Reduce Function – Takes the output from Map as an input and combines those dat
   <tr>
     <td>Input</td>
     <td>Set of data</td> 
-    <td> Bus, Car, bus,  car, train, car, bus, car, train, bus, TRAIN,BUS, buS, caR, CAR, car, BUS, TRAIN</td>
+    <td> </td>
   </tr>
   <tr>
     <td>Output</td>
     <td>Convert into another set of data
 (Key,Value)</td> 
-    <td>(Bus,1), (Car,1), (bus,1), (car,1), (train,1),
-
-(car,1), (bus,1), (car,1), (train,1), (bus,1),
-
-(TRAIN,1),(BUS,1), (buS,1), (caR,1), (CAR,1),
-
-(car,1), (BUS,1), (TRAIN,1)</td>
+    <td></td>
   </tr>
 </table>
 </p>
