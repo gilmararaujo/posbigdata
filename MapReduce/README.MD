@@ -61,13 +61,13 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 
 Splitting – splitting by space, comma, semicolon, or even by a new line (\n');
 
-Mapping – see the Figure 1;
+Mapping – Mapper maps input key/value pairs to a set of intermediate key/value pairs;
 
 Intermediate splitting – the entire process in parallel on different clusters. In order to group them in “Reduce Phase” the similar KEY data should be on same cluster.
 
-Reduce – grouping by phase;
+Reduce – Reducer reduces a set of intermediate values which share a key to a smaller set of values;
 
-Combining – The last phase where all the data (individual result set from each cluster) is combine together to form a result.
+Combining – Input to the Reducer is the sorted output of the mappers. In this phase where all the data (individual result set from each cluster) is combine together to form a result.
 </p>
 
 ## We can see an example of mapreduce through the execution of the jars:
