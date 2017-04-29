@@ -82,6 +82,6 @@ For example: </br>
 #hdfs dfs -copyFromLocal /home/cloudera/input </br>
 #hdfs dfs -ls /user/cloudera/input</br></br>
 Then, execute the algorithm: </br>
-#hadoop jar WordCountPath /user/cloudera/input /user/cloudera/output </br>
-#hadoop jar wordcountcap /user/cloudera/input /user/cloudera/output
+#hadoop jar WordCountPath.jar /user/cloudera/input /user/cloudera/output </br>
+#hadoop jar wordcountcap.jar /user/cloudera/input /user/cloudera/output
 </p>
