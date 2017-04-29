@@ -34,8 +34,8 @@ Reduce Function – Takes the output from Map as an input and combines those dat
 <table style="width:100%">
   <tr>
     <td>Input</td>
-    <td>Set of data</td> 
-    <td> </td>
+    <td>Set of Tuples</td> 
+    <td>Converts into smaller set of tuples</td>
   </tr>
   <tr>
     <td>Output</td>
